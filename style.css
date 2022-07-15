@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Source+Code+Pro&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+i {
+    text-align: center;
+    font-size: 35px;
+    color: blue;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline:none;
+}
+
+h1,h3 {
+    font-family: 'Nunito Sans', sans-serif;
+    padding:5px;
+  
+}
+
+a {
+    /* display:block; */
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+header {
+    height: 100vh;
+    background-image: url("./img/main.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 30px;
+    position: relative;
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+.header-content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    text-align: center;
+    transform:translate(-50%,-50%);
+    color: white;
+    animation:slideUp 2.5s;
+}
+
+@keyframes slideUp{
+    0%{
+        transform:translate(-50%,100%);
+        opacity:0;
+    }
+    100%{
+        transform:translate(-50%,-50%);
+        opacity:1;
+    }
+}
+
+
+.content-1 {
+    text-align: center;
+
+    padding: 100px;
+}
+
+.content-1 h1 {
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+.content-1 p {
+    font-size: 25px;
+}
+
+.img-galary {
+    display: grid;
+    margin: 30px auto;
+    max-width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 400px 400px;
+    gap: 10px 20px;
+    /* padding: 40px 0; */
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.img3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.content-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.content-2 div {
+    max-width: 50%;
+    text-align: center;
+}
+
+
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    max-width: 80%;
+    margin: auto;
+    gap: 15px;
+    padding: 30px 0;
+}
+
+
+
+.card {
+    text-align: center;
+    max-width: 80%;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.card-title {
+    padding: 20px 0;
+}
+
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 0;
+    row-gap: 50px;
+    background-color: #E8EBBB;
+}
+
+.testimonial {
+    text-align: center;
+    max-width: 50%;
+}
+
+.testimonials-container h1 {
+    text-align: center;
+    max-width: 80%;
+}
+
+p {
+    font-size: 25px;
+    line-height: 1.2;
+    font-family: 'Dancing Script', cursive;
+    padding: 20px 0;
+
+}
+
+.last {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.section-content {
+    max-width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+input {
+    height: 30px;
+    margin-right: 10px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.section-content>p,
+.testimonials-container>h1,
+.content-2 div p,
+.content-1>p {
+    position: relative;
+    padding: 20px 0;
+}
+
+.section-content>p:before,
+.testimonials-container>h1:before,
+.content-2 div p:before,
+.content-1>p:before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 30%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
+}
+
+@media screen and (max-width:1127px) {
+    .img-galary {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .img3 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .img-galary {
+        display: block;
+    }
+nav{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap:5px;
+}
+
+}
